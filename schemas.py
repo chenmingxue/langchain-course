@@ -1,6 +1,6 @@
 from typing import List
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field#validation and settings management using python type annotations
 
 
 class Source(BaseModel):

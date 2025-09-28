@@ -16,15 +16,25 @@ from schemas import AgentResponse
 
 tools = [TavilySearch()]
 llm = ChatOpenAI(model="gpt-4")
+structured_llm = llm.with_structured_output(AgentResponse)
 react_prompt = hub.pull("hwchase17/react")
+output_parser = PydanticOutputParser(pydantic_object=AgentResponse)
+format_instructions = output_parser.get_format_instructions()
+react_prompt_with_format_instructions = PromptTemplate(
+    template=REACT_PROMPT_WITH_FORMAT_INSTRUCTIONS,
+    input_variables=["tools", "tool_names", "input", "agent_scratchpad"],   
+    ).partial(format_instructions=output_parser.get_format_instructions())
+
 agent = create_react_agent(
     llm=llm,
     tools=tools,
-    prompt=react_prompt,
+    prompt=react_prompt_with_format_instructions,
 )
 agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
+extract_output = RunnableLambda(lambda x: x["output"])
+parse_output = RunnableLambda(lambda x: output_parser.parse(x))
 
-chain = agent_executor 
+chain = agent_executor | extract_output | structured_llm
 
 def main():
     print("Hello, LangChain!")
