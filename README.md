@@ -1,73 +1,158 @@
-# MCP Crash Course 🚀
-![MCP Tool Call Demo](/static/mcp-tool-call.gif)
+# LangChain- Develop AI Agents with LangChain & LangGraph 🦜🔗
 
+**Learn LangChain and LangGraph by building real world AI Agents (Python, Latest Version 0.3.0+)**
+
+This course is designed to teach you how to QUICKLY harness the power of the LangChain library for LLM applications. Build 3 end-to-end working LangChain based generative AI applications with no fluff, no toy examples - just real projects using real APIs and real-world skills.
+
+![LangChain Logo](/static/LangChain-logo.svg)
+![LangGraph Logo](/static/LangGraph%20wordmark%20-%20dark.svg)
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/EdenMarco177?style=social)](https://twitter.com/EdenMarco177)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-[![udemy](https://img.shields.io/badge/MCP%20Udemy%20Course-ODSC%20Coupon%20%2412.99-brightgreen)](https://www.udemy.com/course/langgraph/?couponCode=JUNE-2025)
+[![udemy](https://img.shields.io/badge/LangChain%20Udemy%20Course%20Coupon%20%2412.99-brightgreen)](https://www.udemy.com/course/langchain/?couponCode=SEP-2025)
 
-Welcome to the MCP Crash Course! This repository is designed to teach you the fundamentals and advanced concepts of the Model Context Protocol (MCP) in a hands-on way.
 
-## What is MCP? 💡
 
-The Model Context Protocol (MCP) helps connect AI-agentic applications powered by Large Language Models (LLMs) to external tools and data sources, enabling more capable and context-aware AI systems.
+## 💡 What You'll Build 
 
-## How it Works 🤔
+This course takes you through building 7 real-world AI agent projects, from simple hello-world applications to advanced agentic systems:
 
-This repository uses a unique branch-based structure for learning:
+| Project | Type | Description |
+|---------|------|-------------|
+| 👋 Hello World Agent | Branch (`project/hello-world`) | Your first AI agent - basic structure and LLM integration |
+| 💻 Code Interpreter | Branch (`project/code-interpreter`) | AI-powered code execution and analysis |
+| 🧠 ReAct Under the Hood | Branch (`project/react-under-hood`) | Understanding reasoning and acting patterns in AI agents |
+| 🔍 [Ice Breaker](https://github.com/emarco177/IceBreaker) | External Repo | Social media profile analyzer |
+| 📝 Medium Analyzer | External Repo | Content analysis and insights generator |
+| 📚 [Documentation Helper](https://github.com/emarco177/documentation-helper) | External Repo | Intelligent documentation assistant |
+| 🪞 [Reflection Agent](https://github.com/emarco177/langgraph-course/tree/project/reflection-agent) | External Repo | Self-improving agent with reflection and critique capabilities |
+| 🔄 [Reflexion Agent](https://github.com/emarco177/langgraph-course/tree/project/reflexion-agent) | External Repo | Advanced self-correcting agent using reflexion techniques |
+| 🤖 [Agentic RAG](https://github.com/emarco177/langgraph-course/tree/project/agentic-rag) | External Repo | Advanced retrieval-augmented generation system |
 
-1.  **Each `project/*` branch covers a specific MCP feature or concept.**
-2.  **Within each branch, commits are ordered chronologically.** Follow the commits one by one to learn the topic step-by-step.
+## 📚 Course Highlights 
 
-Simply check out the branch for the topic you want to learn and walk through the commits!
+- **7 Complete Projects** - From beginner to advanced implementations including Ice Breaker, Documentation Helper, and Code Interpreter
+- **Real-World Applications** - Build agents that solve actual problems with live APIs
+- **Modern Tech Stack** - LangChain v0.3+, LangGraph, Pinecone, FAISS, Streamlit
+- **Practical Skills** - Learn RAG, vector databases, prompt engineering, and agent workflows
+- **Interactive Learning** - Follow commits chronologically for step-by-step learning
 
-## Available Topics (Branches) 📚
+## 🤔 Learning Path 
 
-Here are the topics currently available:
+### Phase 1: Foundations
+1. **Hello World Chain** - Basic agent structure and LLM integration
+2. **Code Interpreter** - Tool calling and code execution capabilities
 
-*   `project/sse`: Learn how to implement Server-Sent Events (SSE) with MCP.
-*   `project/langchain-mcp-adapters`: Explore integrating MCP with LangChain adapters.
-*   `project/docker-mcp`: Understand how to containerize your MCP applications using Docker.
+### Phase 2: Real-World Applications
+3. **Ice Breaker** - Data collection and social media integration
+4. **Documentation Helper** - RAG implementation and knowledge management
 
-*More topics might be added, so keep an eye out!*
+### Phase 3: Advanced Concepts
+5. **Blog Analyzer** - Multi-step reasoning and content analysis
+6. **Agentic RAG** - Self-correcting agents with memory and planning
 
-## Prerequisites 🛠️
+## ▶️ Getting Started 
 
-Before you start, make sure you have the following installed:
+### 🛠️ Prerequisites 
+- **This is not a beginner course** - Basic software engineering concepts needed
+- Familiarity with: git, Python, environment variables, classes, testing and debugging
+- Python 3.10+
+- Any Python package manager (uv, poetry, pipenv) - but NOT conda!
+- Access to an LLM (can be open source via Ollama, or cloud providers like OpenAI, Anthropic, Gemini)
+- No Machine Learning experience needed
 
-*   🐍 Python (version 3.10 or higher)
-*   📦 `uv` (the fast Python package installer and resolver)
-*   ✨ Cursor IDE
-*   ☁️ Claude Desktop
+### ⚙️ Setup Instructions 
 
-## Getting Started ▶️
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/emarco177/langchain-course
+   cd langchain-course
+   ```
+2. **Choose your learning path**
+   
+   **For branch-based projects:**
+   ```bash
+   # Start with Hello World
+   git checkout project/hello-world
+   uv sync
+   uv run python main.py
+   
+   # Progress to Code Interpreter
+   git checkout project/code-interpreter
+   uv sync
+   uv run python main.py
+   ```
+   
+   **For external repository projects:**
+   ```bash
+   # Clone specific project repositories
+   git clone https://github.com/emarco177/ice_breaker
+   cd ice_breaker
+   # Follow project-specific setup instructions
+   ```
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/emarco177/mcp-crash-course.git
-    cd mcp-crash-course
-    ```
-2.  **Choose a topic and check out the branch:**
-    ```bash
-    # Example for the SSE topic
-    git checkout project/sse
-    ```
-3.  **Follow the commits:** Use `git log --oneline --reverse` to see the chronological list of commits for the branch. Then, use `git checkout <commit_hash>` or your Git client to step through the history and learn.
+3. **Follow the commits**
+   - Each commit represents a lesson or feature implementation
+   - Use `git log --oneline` to see the learning progression
+   - Checkout previous commits to understand the development process
 
-## Contributing 🤝
+## 📁 Branches Structure 
 
-Contributions are welcome! If you'd like to add a new topic or improve an existing one:
+```
+langchain-course/
+├── project/hello-world/          # Basic Chain 
+├── project/code-interpreter/     # Slim Code execution 
+└── project/react-under-hood/     # ReAct Algorithm Deep Dive
+```
+**External Projects:**
+- [Ice Breaker](https://github.com/emarco177/ice_breaker) - Social media profile analyzer
+- [Medium Analyzer](https://github.com/emarco177/blog-analyzer) - Content analysis and insights generator
+- [Documentation Helper](https://github.com/emarco177/documentation-helper) - AI documentation assistant
+- [Reflection Agent](https://github.com/emarco177/langgraph-course/tree/project/reflection-agent) - Self-improving agent with reflection and critique capabilities
+- [Reflexion Agent](https://github.com/emarco177/langgraph-course/tree/project/reflexion-agent) - Advanced self-correcting agent using reflexion techniques
+- [Agentic RAG](https://github.com/emarco177/langgraph-course/tree/project/agentic-rag) - Advanced retrieval-augmented generation system
 
-1.  Fork the repository.
-2.  Create a new branch for your feature following the naming convention: `project/your-mcp-feature-name`.
-3.  Make your changes, ensuring each commit represents a logical step in the learning process.
-4.  Open a Pull Request against the `main` branch.
 
-## License 📄
+## 📚 Learning Objectives 
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+By the end of this course, you'll be able to:
 
-Happy learning! 🎉
+- Build AI agents from scratch using modern frameworks
+- Implement tool calling and external API integrations
+- Create RAG systems with vector databases
+- Design multi-step reasoning workflows
+- Deploy agents to production environments
+- Handle error correction and self-improvement in agents
+- Optimize agent performance and cost efficiency
 
+
+
+
+
+## 🙏 Acknowledgements 
+
+Big thanks to the **LangChain / LangGraph** team and their excellent [documentation and tutorials](https://langchain-ai.github.io/langgraph/tutorials/introduction/) that make this course possible.
+
+## 🌟 Support
+
+If you find this project helpful, please consider:
+- ⭐ Starring the repository
+- 🐛 Reporting issues
+- 💡 Contributing improvements
+- 📢 Sharing with others
+
+---
+
+<div align="center">
+
+### 🔗 Connect with Me
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.udemy.com/course/langchain/?referralCode=D981B8213164A3EA91AC)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eden-marco/)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/EdenEmarco177)
+
+**Built with ❤️ by Eden Marco**
+
+</div>
 
